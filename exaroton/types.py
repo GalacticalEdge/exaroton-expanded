@@ -23,10 +23,7 @@ class List(list):
         return ExarotonType.__str__(self)
 
     def __repr__(self) -> None:
-        return (
-            f"exaroton.types.List([{','.join(ExarotonType.__repr__(i) for i in self)}])"
-        )
-
+        return (f"exaroton.types.List([{','.join(ExarotonType.__repr__(i) for i in self)}])")
 
 class ExarotonType:
     def __init__(self) -> None:
@@ -37,21 +34,13 @@ class ExarotonType:
         if isinstance(obj, bytes):
             return repr(obj)
 
-        return {
-            "_": obj.__class__.__name__,
-            **{
-                attr: getattr(obj, attr)
-                for attr in filter(lambda x: not x.startswith("_"), obj.__dict__)
-                if getattr(obj, attr) is not None
-            },
-        }
+        return {"_": obj.__class__.__name__, **{attr: getattr(obj, attr) for attr in filter(lambda x: not x.startswith("_"), obj.__dict__) if getattr(obj, attr) is not None},}
 
     def __str__(self) -> str:
         return json.dumps(self, indent=4, default=ExarotonType.default)
 
     def __repr__(self) -> str:
         return f"<{self.__class__.__name__}: {self.__dict__}>"
-
 
 class Account(ExarotonType):
     name: str

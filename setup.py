@@ -13,14 +13,14 @@ with open("exaroton/__init__.py", encoding="utf-8") as f:
 
 
 setuptools.setup(
-    name="Exaroton",
+    name="Exaroton Expanded",
     version=version,
-    description="Exaroton API Wrapper",
+    description="An effort to continue and add to the exaroton library for Minecraft server hosting",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitlab.com/ColinShark/Exaroton",
-    author="ColinShark",
-    author_email="colin@colinshark.de",
+    url="https://github.com/GalacticalEdge/exaroton-expanded",
+    author="GalacticalEdge",
+    author_email="galacticaledge@protonmail.com",
     license="MIT",
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -36,8 +36,8 @@ setuptools.setup(
         "Topic :: Games/Entertainment",
     ],
     keywords="exaroton minecraft api wrapper",
-    project_urls={"Issue Tracker": "https://gitlab.com/ColinShark/exaroton/-/issues"},
-    # package_dir={"": "exaroton"},
+    project_urls={"Issue Tracker": "https://github.com/GalacticalEdge/exaroton-expanded"},
+    # package_dir={"": "exaroton-expanded"},
     packages=setuptools.find_packages(),
     python_requires=">=3.6",
     install_requires=dependencies,

@@ -81,6 +81,20 @@ class Exaroton:
         """
         _data = self._make_request(f"servers/{id}")["data"]
         return types.Server(**_data)
+    
+    def get_server_is_running(self, id: str) -> bool:
+        """Returns whether the server is running
+
+        Args:
+            ``id`` (``str``): The ID of the server
+
+        Returns:
+            ``bool``: If the server is currently running
+        """
+        if self.get_server(id).status == "Online":
+            return True
+        else:
+            return False
 
     def get_server_logs(self, id: str) -> str:
         """Retrieve logs of the specified server

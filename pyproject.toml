@@ -2,10 +2,10 @@
 name = "exaroton"
 version = "0.0.5"
 description = "Python API wrapper for exaroton"
-authors = ["Colin <colin@colinshark.de>"]
+authors = ["GalacticalEdge <galacticaledge@protonmail.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/ColinShark/exaroton"
+repository = "https://github.com/GalacticalEdge/exaroton-expanded"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Natural Language :: English",
