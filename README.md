@@ -2,7 +2,7 @@
 
 This is a fork of CollinShark's unofficial Python Wrapper for the [exaroton API](https://developers.exaroton.com/)
 
-To use this, the steps are as ample as getting an API Token from [your Account](https://exaroton.com/account/) and you're good to go.
+To use this, the steps are as quick as getting an API Token from [your Account](https://exaroton.com/account/) and you're good to go.
 
 [![Python: 3.7+](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/downloads)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
