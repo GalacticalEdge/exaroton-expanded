@@ -1,6 +1,5 @@
 import json
 
-
 _status_map = {
     0: "Offline",
     1: "Online",

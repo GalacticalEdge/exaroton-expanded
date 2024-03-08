@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "exaroton"
+name = "exaroton-expanded"
 version = "0.0.5"
 description = "Python API wrapper for exaroton"
 authors = ["GalacticalEdge <galacticaledge@protonmail.com>"]

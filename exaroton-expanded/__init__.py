@@ -2,4 +2,4 @@
 
 __version__ = "0.0.5"
 
-from .exaroton import Exaroton
+from .exaroton_expanded import Exaroton
