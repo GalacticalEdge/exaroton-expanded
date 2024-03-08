@@ -24,7 +24,7 @@ I may create a full list of all available methods, or even utilize readthedocs.o
 
 ```python
 # Import exaroton and set our token
->>> from exaroton import Exaroton
+>>> from exaroton_expanded import Exaroton
 >>> exa = Exaroton("API_TOKEN")
 
 # Get information about the authenticated account
