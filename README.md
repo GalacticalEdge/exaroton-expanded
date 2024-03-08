@@ -13,7 +13,7 @@ To use this, the steps are as quick as getting an API Token from [your Account](
 
 exaroton requires Python 3.7 or newer.
 
-I have not uploaded this to PyPi yet, but I will once I deem this fork sufficient. You can help me speed this up by testing my work.
+I have not uploaded this to PyPi yet, but I will once I deem this fork sufficient enough as an extension of the original project. You can help me speed this up by testing my work and opening pull requests.
 
 ## Example Usage
 
