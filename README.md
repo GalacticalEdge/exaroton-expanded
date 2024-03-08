@@ -1,8 +1,8 @@
 # exaroton
 
-An unoffial Python Wrapper for the [exaroton API](https://developers.exaroton.com/)
+This is a fork of CollinShark's unofficial Python Wrapper for the [exaroton API](https://developers.exaroton.com/)
 
-Simply get an API Token from [your Account](https://exaroton.com/account/) and you're good to go.
+To use this, the steps are as ample as getting an API Token from [your Account](https://exaroton.com/account/) and you're good to go.
 
 [![Python: 3.7+](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/downloads)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -13,18 +13,7 @@ Simply get an API Token from [your Account](https://exaroton.com/account/) and y
 
 exaroton requires Python 3.7 or newer.
 
-```sh
-python3 -m pip install -U exaroton
-```
-
-A Virtual Environment is recommended to not mess with system installs.
-This module has minimal requirements (`requests`), but you can never be safe enough.
-
-```sh
-python3 -m venv venv
-source ./venv/bin/activate
-pip install exaroton
-```
+I have not uploaded this to PyPi yet, but I will once I deem this fork sufficient. You can help me speed this up by testing my work.
 
 ## Example Usage
 
@@ -83,6 +72,6 @@ from your account page. If you make server-specific calls, you'll need that
 servers ID, too.
 
 
-## The boring stuff
+## Legal
 
 Licensed under [MIT](https://github.com/ColinShark/exaroton/blob/master/LICENSE)
