@@ -82,7 +82,7 @@ class Exaroton:
         _data = self._make_request(f"servers/{id}")["data"]
         return types.Server(**_data)
     
-    def get_server_is_running(self, id: str) -> bool:
+    def get_server_status(self, id: str) -> bool:
         """Returns whether the server is running
 
         Args:
@@ -91,10 +91,7 @@ class Exaroton:
         Returns:
             ``bool``: If the server is currently running
         """
-        if self.get_server(id).status == "Online":
-            return True
-        else:
-            return False
+        return self._make_request(f"servers/{id}")["data"].status
 
     def get_server_logs(self, id: str) -> str:
         """Retrieve logs of the specified server
@@ -278,3 +275,62 @@ class Exaroton:
     def delete_file_data(self, id: str, path: str):
         _data = self._make_request(f"servers/{id}/files/data/{path}", "delete")
         return _data
+
+class Server(Exaroton):
+    def __init__(self, token: str, id: str, host: str = "https://api.exaroton.com/v1") -> None:
+        super(token, host)
+        self._id = id
+    
+    def get_account(self) -> types.Account:
+        return super().get_account()
+    
+    def get_servers(self) -> types.List:
+        return super().get_servers()
+    
+    def get_server(self) -> types.Server:
+        return super().get_server(self._id)
+    
+    def get_server_status(self) -> bool:
+        return super().get_server_status(self._id)
+    
+    def get_server_logs(self) -> str:
+        return super().get_server_logs(self._id)
+    
+    def upload_logs(self) -> types.Logs:
+        return super().upload_logs(self._id)
+    
+    def get_server_ram(self) -> int:
+        return super().get_server_ram(self._id)
+    
+    def set_server_ram(self, ram: int) -> int:
+        return super().set_server_ram(self._id, ram)
+    
+    def start(self) -> str:
+        return super().start(self._id)
+    
+    def stop(self) -> str:
+        return super().stop(self._id)
+    
+    def command(self, command: str) -> str:
+        return super().command(self._id, command)
+    
+    def get_player_lists(self) -> list:
+        return super().get_player_lists(self._id)
+    
+    def get_player_list(self, player_list: str) -> list:
+        return super().get_player_list(self._id, player_list)
+    
+    def add_player_to_list(self, player_list: str, usernames: list) -> list:
+        return super().add_player_to_list(self._id, player_list, usernames)
+    
+    def remove_player_from_list(self, player_list: str, usernames: list):
+        return super().remove_player_from_list(self._id, player_list, usernames)
+    
+    def get_file_data(self, path: str):
+        return super().get_file_data(self._id, path)
+    
+    def write_file_data(self, path: str = None, data=None):
+        return super().write_file_data(self._id, path, data)
+    
+    def delete_file_data(self, id: str, path: str):
+        return super().delete_file_data(self._id, path)
