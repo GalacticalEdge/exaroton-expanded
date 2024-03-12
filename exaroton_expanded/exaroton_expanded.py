@@ -270,10 +270,11 @@ class Exaroton:
         """Write content to a file. If it doesn't exist yet, it'll be created."""
         # TODO implement
         try:
-            self._make_request(f"servers/{id}/files/data/{path}", "put")
+            _data = self._make_request(f"servers/{id}/files/data/{path}", "put", data)
+            return _data
         except:
             raise NotImplementedError("This method hasn't been implemented yet")
-        # _data = self._make_request(f"servers/{id}/files/data/{path}", "put")
+        
 
     def delete_file_data(self, id: str, path: str):
         _data = self._make_request(f"servers/{id}/files/data/{path}", "delete")
