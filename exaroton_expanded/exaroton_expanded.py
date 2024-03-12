@@ -4,7 +4,6 @@ import requests
 
 from . import types
 
-
 class Exaroton:
     """Exaroton Class for the API"""
 
@@ -35,7 +34,7 @@ class Exaroton:
             JSON serialized data
         """
         req = self._session.request(method, f"{self._host}/{path}", **kwargs)
-        # TODO Error Handling
+
         content_type = req.headers["content-type"]
 
         if content_type == "application/json":
@@ -286,6 +285,11 @@ class ServerInstance(Exaroton):
         return super().get_account()
     
     def get_servers(self) -> types.List:
+        """NOTE: This function is best used with the default Exaroton class
+
+        Returns:
+            ``types.List``: List of ``types.Server`` objects
+        """
         return super().get_servers()
     
     def get_server(self) -> types.Server:
