@@ -88,7 +88,7 @@ servers ID, too.
 ## Planned Features
 • Convenient access to specific attributes of a server (Preliminary)
 
-• Complete unfinished functions (Not started)
+• Complete unfinished functions (Completed)
 
 • Improved error handling (Not started)
 
