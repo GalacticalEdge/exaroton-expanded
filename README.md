@@ -1,4 +1,4 @@
-# exaroton
+# Exaroton Expanded
 
 This is a fork of CollinShark's unofficial Python Wrapper for the [exaroton API](https://developers.exaroton.com/)
 
@@ -10,9 +10,6 @@ To use this, the steps are as quick as getting an API Token from [your Account](
 <!-- [![Gitmoji: 💻🔥](https://img.shields.io/badge/Gitmoji-%F0%9F%92%BB%F0%9F%94%A5-yellow)](https://github.com/carloscuesta/gitmoji#readme) -->
 
 ## Installation
-
-exaroton requires Python 3.7 or newer.
-
 I have not uploaded this to PyPi yet, but I will once I deem this fork sufficient enough as an extension of the original project. You can help me speed this up by testing my work and opening pull requests.
 
 If you want to try though, you can either download the source code and build it yourself or download a prebuilt wheel from the releases. The former can be done by running the setup.py file in the same directory that you extract the source code to with the following commands (if you are downloading the prebuilt wheel, please skip over to the next step):
@@ -23,7 +20,7 @@ Windows:
 MacOS/Linux:
 >> python3 /path/to/setup.py bdist_wheel
 
-Once you've done either one of those steps, look for a file in the dist folder containing with a .whl extension, then run one of the following commands to install it:
+Once you've done either one of those steps, look for a file in the dist folder containing the .whl extension, then run one of the following commands to install it:
 
 Windows:
 >> pip3 install /path/to/build.whl
