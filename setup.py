@@ -1,14 +1,14 @@
 import re
-
 import setuptools
+import pathlib as pl
 
-with open("README.md", encoding="utf8") as f:
+with open(str(pl.Path(__file__).parent) + "/README.md", encoding="utf8") as f:
     long_description = f.read()
 
-with open("requirements.txt", encoding="utf8") as f:
+with open(str(pl.Path(__file__).parent) + "/requirements.txt", encoding="utf8") as f:
     dependencies = f.read()
 
-with open("exaroton_expanded/__init__.py", encoding="utf-8") as f:
+with open(str(pl.Path(__file__).parent) + "/exaroton_expanded/__init__.py", encoding="utf-8") as f:
     version = re.findall(r"__version__ = \"(.+)\"", f.read())[0]
 
 setuptools.setup(
