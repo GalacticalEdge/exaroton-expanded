@@ -91,7 +91,7 @@ class Exaroton:
         Returns:
             ``bool``: If the server is currently running
         """
-        return self._make_request(f"servers/{id}")["data"].status
+        return types.Server(**self._make_request(f"servers/{id}")["data"]).status
 
     def get_server_logs(self, id: str) -> str:
         """Retrieve logs of the specified server
@@ -276,9 +276,11 @@ class Exaroton:
         _data = self._make_request(f"servers/{id}/files/data/{path}", "delete")
         return _data
 
-class Server(Exaroton):
+class ServerInstance(Exaroton):
+    """A standalone instance of a server. This is useful when only managing a single instance"""
+
     def __init__(self, token: str, id: str, host: str = "https://api.exaroton.com/v1") -> None:
-        super(token, host)
+        super().__init__(token, host)
         self._id = id
     
     def get_account(self) -> types.Account:

@@ -3,4 +3,4 @@
 __version__ = "0.0.7"
 
 from .exaroton_expanded import Exaroton
-from .exaroton_expanded import Server
+from .exaroton_expanded import ServerInstance
