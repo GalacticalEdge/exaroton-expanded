@@ -268,7 +268,6 @@ class Exaroton:
 
     def write_file_data(self, id: str = None, path: str = None, data = None):
         """Write content to a file. If it doesn't exist yet, it'll be created."""
-        # TODO implement
         _data = self._make_request(f"servers/{id}/files/data/{path}", "put", data=data)
         return _data
         
