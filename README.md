@@ -32,8 +32,7 @@ Once you've completed those steps, you should be good to go! Enjoy it :)
 
 ## Example Usage
 
-Currently all methods are (in my opinion) well documented and properly typehinted.
-If you see something wrong, don't hestitate to [create an Issue](https://github.com/ColinShark/exaroton/issues/new).
+Currently most methods are documented in the source code. I will consider including a more accessible form of documentation in the future.
 
 I may create a full list of all available methods, or even utilize readthedocs.org
 
@@ -86,11 +85,14 @@ All you need to make calls to the API is the Authentication Token you can get
 from your account page. If you make server-specific calls, you'll need that
 servers ID, too.
 
-## Additional Features Over The Original Project (So Far)
-• A function that gives a boolean value of the server's running status
+## Planned Features
+• Convenient access to specific attributes of a server (Preliminary)
+• Complete unfinished functions (Not started)
+• Improved error handling (Not started)
+• New Features (Planned)
 
-More to come
+and more to come
 
 ## Legal
 
-Licensed under [MIT](https://github.com/ColinShark/exaroton/blob/master/LICENSE)
+Licensed under [MIT](https://github.com/GalacticalEdge/exaroton-expanded/blob/master/LICENSE)
