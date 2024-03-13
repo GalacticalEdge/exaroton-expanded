@@ -96,8 +96,6 @@ servers ID, too.
 
 Please note that I may not be able to do much work from March to May due to upcoming tests I have around that time period
 
-and more to come
-
 ## Legal
 
 Licensed under [MIT](https://github.com/GalacticalEdge/exaroton-expanded/blob/master/LICENSE)
