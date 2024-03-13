@@ -94,6 +94,8 @@ servers ID, too.
 
 • New Features (Planned)
 
+Please note that I may not be able to do much work from March to May due to upcoming tests I have around that time period
+
 and more to come
 
 ## Legal
