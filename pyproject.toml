@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "exaroton-expanded"
-version = "0.0.8"
+version = "0.0.9-pre2"
 description = "Python API wrapper for exaroton"
 authors = ["GalacticalEdge <galacticaledge@protonmail.com>"]
 license = "MIT"
