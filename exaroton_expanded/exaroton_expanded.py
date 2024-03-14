@@ -265,13 +265,53 @@ class Exaroton:
         _data = self._make_request(f"servers/{id}/files/data/{path}")
         return _data
 
-    def write_file_data(self, id: str = None, path: str = None, data = None):
-        """Write content to a file. If it doesn't exist yet, it'll be created."""
+    def write_file_data(self, id: str, path: str, data: str = None):
+        """Write content to a file. If it doesn't exist yet, it'll be created.
+
+        Args:
+            ``id`` (``str``): The ID of your server
+            ``path`` (``str``): The path of the file you want to write to/create
+            ``data`` (``str``, optional): The data you want to write to your server. Defaults to None.
+        """
         _data = self._make_request(f"servers/{id}/files/data/{path}", "put", data=data)
         return _data
         
     def delete_file_data(self, id: str, path: str):
+        """Allows you to delete a file from your server
+
+        Args:
+            ``id`` (``str``): The ID of your server
+            ``path`` (``str``): The path of the file you want to delete
+        """
         _data = self._make_request(f"servers/{id}/files/data/{path}", "delete")
+        return _data
+    
+    def get_credit_pools(self):
+        """Retrieves credit pools attached to your account
+        """
+        _data = self._make_request("/billing/pools/", "get")
+        return _data
+    
+    def get_credit_pool(self, pool_id: str):
+        """Allows you to get information on a specific credit pool
+
+        Args:
+            ``pool_id`` (``str``): The ID of the pool
+        """
+        _data = self._make_request(f"/billing/pools/{pool_id}", "get")
+        return _data
+    
+    def get_credit_pool_members(self, pool_id: str):
+        """Retrieves a list of members in your pool
+
+        Args:
+            ``pool_id`` (``str``): The ID of the pool
+        """
+        _data = self._make_request(f"/billing/pools/{pool_id}/members/", "get")
+        return _data
+    
+    def get_credit_pool_servers(self, pool_id: str):
+        _data = self._make_request(f"/billing/pools/{pool_id}/servers/", "get")
         return _data
 
 class ServerInstance(Exaroton):
