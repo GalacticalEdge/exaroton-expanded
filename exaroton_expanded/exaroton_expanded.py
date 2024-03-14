@@ -6,7 +6,6 @@ from . import types
 
 class Exaroton:
     """Exaroton Class for the API"""
-
     def __init__(self, token: str, host: str = "https://api.exaroton.com/v1") -> None:
         """
         Exaroton Class to interface with the API
@@ -289,7 +288,7 @@ class Exaroton:
     def get_credit_pools(self):
         """Retrieves credit pools attached to your account
         """
-        _data = self._make_request("/billing/pools/", "get")
+        _data = self._make_request("billing/pools/", "get")["data"]
         return _data
     
     def get_credit_pool(self, pool_id: str):
@@ -298,7 +297,7 @@ class Exaroton:
         Args:
             ``pool_id`` (``str``): The ID of the pool
         """
-        _data = self._make_request(f"/billing/pools/{pool_id}", "get")
+        _data = self._make_request(f"billing/pools/{pool_id}", "get")
         return _data
     
     def get_credit_pool_members(self, pool_id: str):
@@ -307,11 +306,11 @@ class Exaroton:
         Args:
             ``pool_id`` (``str``): The ID of the pool
         """
-        _data = self._make_request(f"/billing/pools/{pool_id}/members/", "get")
+        _data = self._make_request(f"billing/pools/{pool_id}/members/", "get")
         return _data
     
     def get_credit_pool_servers(self, pool_id: str):
-        _data = self._make_request(f"/billing/pools/{pool_id}/servers/", "get")
+        _data = self._make_request(f"billing/pools/{pool_id}/servers/", "get")
         return _data
 
 class ServerInstance(Exaroton):
