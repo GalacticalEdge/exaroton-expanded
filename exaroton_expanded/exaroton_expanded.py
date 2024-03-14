@@ -21,6 +21,10 @@ class Exaroton:
         self._session = requests.Session()
         self._session.headers.update({"Authorization": f"Bearer {token}"})
 
+    def check_for_failure(self, _data):
+        if _data["success"] == False:
+            raise types.DataError(_data)
+
     def _make_request(self, path: str, method: str = "get", **kwargs):
         """Make HTTP Requests against the API
 
@@ -33,22 +37,30 @@ class Exaroton:
             JSON serialized data
         """
         req = self._session.request(method, f"{self._host}/{path}", **kwargs)
-
+        # TODO Error Handling
         content_type = req.headers["content-type"]
 
         if content_type == "application/json":
-            return req.json()
+            _data = req.json()
+            self.check_for_failure(_data)
+            return _data
 
         elif content_type == "text/plain;charset=UTF-8":
-            return bytes.decode(req.content, "utf8")
+            _data = bytes.decode(req.content, "utf8")
+            self.check_for_failure(_data)
+            return _data
 
         elif content_type == "application/octet-stream":
-            return req.content
+            _data = req.content
+            self.check_for_failure(_data)
+            return _data
 
         elif content_type == "image/png":
             # In case returned data is an image (for example the server-icon.png)
             # This type isn't actually documentated by the API Docs :thumbsup:
-            return req.content
+            _data = req.content
+            self.check_for_failure(_data)
+            return _data
 
     def get_account(self) -> types.Account:
         """Get information about the authenticated Account
@@ -284,6 +296,8 @@ class Exaroton:
         """
         _data = self._make_request(f"servers/{id}/files/data/{path}", "delete")
         return _data
+    
+    # They will be given dedicated classes later on
     
     def get_credit_pools(self):
         """Retrieves credit pools attached to your account

@@ -122,3 +122,11 @@ class Logs(ExarotonType):
         self.id = id
         self.url = url
         self.raw = raw
+
+# This class will be implemented later
+class Pools(ExarotonType):
+    pass
+        
+class DataError(Exception):
+    def __init__(self, _data):
+        super().__init__("An error occurred trying to retrieve data. Error: " + _data["error"])
